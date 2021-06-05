@@ -17,12 +17,12 @@ jobs:
           SOURCE_CODE: ${{ secrets.CODE }}
           THEME_WAREHOUSE: ${{ secrets.THEME }}
         run: |
-          git clone -b master $SOURCE_CODE gh
+          git clone -b master https://github.com/axpv-code/ndajknkdnclasmckascla gh
           cd gh
           npm install
           rm -rf .github
           rm -rf .gitignore
-          git clone $THEME_WAREHOUSE themes/themes
+          git clone https://github.com/axpv-code/hexo-theme-diaspora themes/themes
           ${{ secrets.OTHER }}
           hexo generate
       - name: Deploy
